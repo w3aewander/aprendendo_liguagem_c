@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "wscutil.h"
 
-int main(int argc, char* argv[]){
+int main(int argc, char** argv){
 
 	float vo=0, t_rt=0, t_rb=0, f_rt=0, f_rb=0, result=0;
 	
