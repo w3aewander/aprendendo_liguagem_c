@@ -24,6 +24,10 @@ int main(int argc, char* argv[]){
 	}
 
 	printf("\nNovo valor na nova escala: %.4f\n\n", result);
+
+	// testando as funções de conversão de temperatura.
+	// printf("\nCelsius para Fahrenheit: %.2f : %8.2f\n", 10.0f, CelsiusToFahrenheit(10.0f) );
+	// printf("\nFahrenheit to Celsius: %.2f : %8.2f\n", 50.0f, FahrenheitToCelsius(50.0f) );
 	
 	return 0;
 }
