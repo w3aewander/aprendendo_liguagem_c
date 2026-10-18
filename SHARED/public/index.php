@@ -14,8 +14,11 @@ $ffi = FFI::cdef(
 $resultado = null;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
     $a = floatval($_POST["a"]);
     $b = floatval($_POST["b"]);
+
+    
     $op = $_POST["op"];
 
     switch ($op) {
@@ -29,42 +32,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $resultado = $ffi->multiplicar($a, $b);
             break;
         case "dividir":
-            $resultado = $ffi->dividir($a, $b);
+            // evitar divisão por zero.
+            if ( $b != 0 ) 
+                $resultado = $ffi->dividir($a, $b);
+            else
+                $resultado = "Divisão por zero  não permitido";
             break;
     }
 }
+
+// Start capturing the HTML file
+ob_start();
+include '../src/views/index.tpl';   // your HTML file
+$pageContent = ob_get_clean(); // capture and clear buffer
+
+
+// Display the final composed page
+echo $pageContent;
+
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Calculadora C + PHP</title>
-</head>
-<body>
-    <h2>Calculadora usando biblioteca C</h2>
 
-    <form method="POST">
-        <label>Primeiro número:</label><br>
-        <input type="number" step="any" name="a" required><br><br>
-
-        <label>Segundo número:</label><br>
-        <input type="number" step="any" name="b" required><br><br>
-
-        <label>Operação:</label><br>
-        <select name="op">
-            <option value="somar">Somar</option>
-            <option value="subtrair">Subtrair</option>
-            <option value="multiplicar">Multiplicar</option>
-            <option value="dividir">Dividir</option>
-        </select><br><br>
-
-        <button type="submit">Calcular</button>
-    </form>
-
-    <?php if ($resultado !== null): ?>
-        <h3>Resultado: <?= $resultado ?></h3>
-    <?php endif; ?>
-</body>
-</html>
 
