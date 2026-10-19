@@ -2,6 +2,7 @@
 #include <dlfcn.h>
 #include <stdlib.h>
 
+
 int main(int argc, char **argv) {
     void *handle;
     double (*func)(double, double);
@@ -40,6 +41,8 @@ int main(int argc, char **argv) {
     printf("Resultado da soma: %.2f\n", resultado);
 
     dlclose(handle);
+
+
     return 0;
 }
 
