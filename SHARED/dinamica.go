@@ -14,10 +14,6 @@ import "fmt"
 func main() {
     var a float64
     var b float64
-    //var resSomar float64 
-    //var resSubtrair float64
-    //var resMultiplicar float64
-    //var resDividir float64
 
     fmt.Printf("\nDigite o primeiro número: ")	
     fmt.Scanf("%f", &a);
@@ -38,7 +34,5 @@ func main() {
 		float64(resSubtrair), 
 		float64(resMultiplicar), 
 		float64(resDividir) )
-
-
 }
 
