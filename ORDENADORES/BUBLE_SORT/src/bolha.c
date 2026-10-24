@@ -21,8 +21,7 @@ void ordenar(int arr[], int count) {
 }
 
 void print_array(int arr[], int count) {
-    printf("Elementos do Vetor:\n");
-
+    
     for (int i = 0; i < count; i++) {
         printf("%d ", arr[i]);
     }
