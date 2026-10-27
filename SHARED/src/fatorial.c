@@ -1,10 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "wsmath.h"
 
-int main(void){
-
+int main(int argc, char* argv[]){
   
-  printf( "Fatorial de 5: %d\n", fatorial(5));	
+  if ( argc == 1) {
+    printf("\nUso: fatorial <numero>\n"); 
+    exit(1);
+  } 
+  
+  if (argc == 2){
+    
+    int num;
+    num =  atoi(argv[1]);
+    printf("Fatorial de %d: %ld\n", num, fatorial(num));	
+    
+  } 
+  
 
   
   return 0;
