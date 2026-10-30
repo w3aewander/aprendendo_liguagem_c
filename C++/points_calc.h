@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <math.h>
 
 typedef struct {
@@ -34,3 +35,5 @@ double area(Point p1, Point p2){
 
   return result; 
 }
+
+
