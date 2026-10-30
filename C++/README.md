@@ -1,9 +1,7 @@
 # Cálculo Matemático com Pontos
 >
 > Wanderlei Silva do Carmo
-
 > Eng. Arquiteto de Software
-
 >
 
 ### O código fonte deve ser compilado com o comando abaixo
