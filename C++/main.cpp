@@ -2,8 +2,6 @@
 #include <cstdio>
 #include "points_calc.h"
 
-// Compile com:
-// g++ -o distancia main.cpp -fPIC -lm
 
 int main(int argc, char** argv){
 
