@@ -35,6 +35,16 @@ int main(int argc, char** argv){
          somatorioDobros(0.01, 20)
         );
 
+  Pessoa *pessoa = new Pessoa();
+
+  pessoa.nome = "Wanderlei Silva";
+  pessoa.idade = 62;
+
+  std::cout << "Nome..........: " << pessoa->nome << std::endl;
+  std::cout << "Idade.........: " << pessoa->nome << std::endl;
+  std::cout << "Ano nascimento: " << pessoa->anoNascimento() << std::endl;
+
+
   return 0;
 
 }
